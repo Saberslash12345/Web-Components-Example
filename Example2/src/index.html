@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <link href="./global/index.css" rel="stylesheet" type="text/css">
+  </link>
+
+
+  <title>Stencil Component Starter</title>
+  <script src="/build/mycomponent.js"></script>
+</head>
+
+<body>
+  <button id="side-drawer-btn">Open Side Menu</button>
+  <uc-side-drawer title="Main Menu">
+    <nav class="side-nav">
+      <ul>
+        <li><a href="/">First Link</a></li>
+        <li><a href="/">Second Link</a></li>
+        <li><a href="/">Third Link</a></li>
+      </ul>
+    </nav>
+  </uc-side-drawer>
+
+  <button id="callback-button">Change button from Web Component</button>
+
+  <script>
+    const sideDrawerButton = document.querySelector('#side-drawer-btn');
+    const callbackButton = document.querySelector('#callback-button');
+
+    const sideDrawer = document.querySelector('uc-side-drawer');
+
+    sideDrawer.onData = (message) => {
+      console.log('Message from Web Component >>>>>>>> ', message);
+    };
+
+    setButtonName = (name) => {
+      callbackButton.innerText = name;
+    };
+
+    callbackButton.addEventListener('click', () => {
+      sideDrawer.getButtonName(setButtonName);
+    });
+
+    sideDrawerButton.addEventListener('click', () => {
+      if (!sideDrawer.opened) {
+        sideDrawer.open();
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>

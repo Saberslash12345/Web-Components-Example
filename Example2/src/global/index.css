@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: black;
+}
+
+.side-nav ul li {
+    padding: 20px 0;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.side-nav ul li:hover {
+    border: 2px solid white;
+    background: #484844;
+}
+
+.side-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#side-drawer-btn {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: none;
+    background: black;
+    padding: 20px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    outline: none;
+    cursor: pointer;
+
+}
+
+#side-drawer-btn:hover,
+#callback-button:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.4s ease 0s,
+}
+
+#callback-button {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: none;
+    background: black;
+    padding: 20px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    outline: none;
+    cursor: pointer;
+}
